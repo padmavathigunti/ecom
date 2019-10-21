@@ -1,0 +1,11 @@
+{{details.Product_name}}
+{{details.Product_description}}
+{{details.Product_cost}}
+{{details.no_of_products}}<br>
+<form method="POST" action="{% url 'single_data' details.id %}">
+{% csrf_token %}
+<label>email</label>
+<input type="text" name="email"><br>
+<a href="{% url 'single_data' pk=details.pk %}"><input type="submit" value="Buy"></a>
+
+</form>

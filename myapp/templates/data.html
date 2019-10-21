@@ -1,0 +1,9 @@
+
+
+
+{% for i in details %}
+    <a href="{% url 'single_data' pk=i.pk %}">{{i.Product_name}}</a>
+    <a href="{% url 'destroy' pk=i.pk %}">delete</a><br>
+
+{% endfor %}
+

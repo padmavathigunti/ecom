@@ -1,0 +1,4 @@
+
+{% for i in details %}
+    {{i.Username}}--{{i.email}}--{{i.phone_number}}---{{i.Account_balance}}------<a href="{% url 'destroy1' pk=i.pk %}">delete</a><br>
+{% endfor %}
